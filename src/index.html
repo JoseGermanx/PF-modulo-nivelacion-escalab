@@ -6,6 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/src/css/style.css" media="screen" />
     <title>On line Store - Proyecto Final</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+ /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
+$(document).ready(function(){    
+    $('#boton-guardar').click(function(){        
+        /*Captura de datos escrito en los inputs*/        
+        var prod = document.getElementById("prod-name").value;
+        var prodPrice = document.getElementById("prod-price").value;
+        /*Guardando los datos en el LocalStorage*/
+        localStorage.setItem("Producto", prod);
+        localStorage.setItem("Precio", prodPrice);
+        /*Limpiando los campos o inputs*/
+        document.getElementById("prod-name").value = "";
+        document.getElementById("prod-price").value = "";
+    });   
+});
+
+/*Funcion Cargar y Mostrar datos*/
+$(document).ready(function(){    
+    $('#boton-cargar').click(function(){                       
+        /*Obtener datos almacenados*/
+        var prod = localStorage.getItem("Producto");
+        var prodPrice = localStorage.getItem("Precio");
+        /*Mostrar datos almacenados*/      
+        document.getElementById("prod-encarro").innerHTML = prod;
+        document.getElementById("price-encarro").innerHTML = prodPrice; 
+    });   
+});
+
+</script>
 </head>
 <body>
 <div class="container">
@@ -41,18 +71,18 @@
                     <div class="prod-img">
                         <img src="/src/img/img_load.jpg"/>
                     </div>
-                    <div class="prod-name">
+                    <input type="hidden" class="prod-name" id="prod-name" value="Product Name">
                         <p>Product Name</p>
-                    </div>
+                    </input>
                     <div class="prod-footer">
                         <div class="prod-price">
-                            <div class="price">
+                            <input type="hidden" class="price" id="prod-price" value="$10.00">
                                 <p>$10,00</p>
-                            </div>
+                        </input>
                         </div>
-                        <div class="button">
+                        <button class="button" id="boton-guardar">
                             <p>CARRO</p>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="prod-card">

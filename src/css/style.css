@@ -16,6 +16,16 @@
     justify-content: space-between;
     color: white;
 }
+
+.header-bar .title{
+    padding-left: 5%;
+
+}
+
+.nav {
+    padding-right: 5%;
+}
+
 .nav li {
     list-style: none;
     display: flex;
@@ -24,7 +34,13 @@
     
 }
 .nav li ul {
-    padding: auto;
+    line-height:100%;
+    padding: 10px;
+}
+
+.nav li ul:hover {
+    border-bottom: solid 1px white;
+    cursor: pointer;
 }
 
 .jumbotron {
