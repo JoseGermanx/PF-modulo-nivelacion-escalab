@@ -1,0 +1,14 @@
+[
+    { "prod_name":  "Arnés Fuzzyard",
+      "price": "$10,00"},
+      { "prod_name":  "Correas para paseos",
+      "price": "20,00"},
+      { "prod_name":  "ZippyBallz Pelotas",
+      "price": "$5,00"},
+      { "prod_name":  "Pawise Cama",
+      "price": "$40,00"},
+      { "prod_name":  "Planet Dog Frutas",
+      "price": "$10,00"},
+      { "prod_name":  "Bolso Transporte",
+      "price": "$100,00"}
+]

@@ -2,6 +2,17 @@
    font-family: "Muli", "Helvetica Neue", Helvetica, Arial;
 }
 
+:root {
+--main-color: #0e3532;
+--main2-color:#00687a;
+--text2-color:#f0ffbf;
+--background-color: #fad895;
+--fieds-color: #ffcf57;
+}
+body {
+    background-color: var(--background-color)
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -12,7 +23,7 @@
 .header-bar {
     display: flex;
     flex-direction: row;
-    background-color: rgb(12, 12, 64);
+    background-color: var(--main-color);
     justify-content: space-between;
     color: white;
 }
@@ -46,11 +57,11 @@
 .jumbotron {
     display: flex;
     flex-direction: row;
-    background-image: url(/src/img/header_background.jpg);
+    background-image: url(/src/img/OPSEG70.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
-    background-color: rgb(14, 121, 180);
+    background-color: var(--main-color);
     color: white;
     align-items: center;
     padding-left: 15%;
@@ -62,7 +73,7 @@
 }
 
 .perifericos {
-    
+    background-color: var(--main2-color);
     margin-top: 30px;
     margin-bottom:30px;
 }
@@ -79,19 +90,15 @@
     color: rgb(162, 160, 160);
 }
 
-.perifericos-2 {
-    background-color: rgba(154, 218, 250, 0.348)
-}
 .prod-grip {
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center     
 }
 
 .prod-card {
     max-width: 80%;
-    background-color: rgb(54, 180, 238);
+    background-color: var(--main-color);
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -108,7 +115,7 @@
 }
 
 .prod-name {
-    background: rgb(12, 12, 64);
+    background: var(--fieds-color );
     width: 100%;
     display: flex;
     align-items: center;
@@ -119,7 +126,7 @@
 .prod-name p {
    
    font-size: 0.6em;
-   color: white;
+   color: var(--text2-color);
 }
 .prod-footer {
     display: flex;
@@ -132,7 +139,7 @@
 .prod-footer > div p {
     font-size:0.9em;
     font-weight: bold;
-    color:white
+    color: var(--text2-color);
 }
 
 .prod-footer .button {
@@ -140,4 +147,26 @@
 }
 .prod-footer .button:hover {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 850px) {
+
+    .prod-grip {
+       grid-template-columns: 1fr;
+         
+    }
+}
+@media only screen and (min-width: 851px) {
+
+    .prod-grip {
+       grid-template-columns: 1fr 1fr;
+         
+    }
+}
+@media only screen and (min-width: 951px) {
+
+    .prod-grip {
+        grid-template-columns: 1fr 1fr 1fr;
+         
+    }
 }
