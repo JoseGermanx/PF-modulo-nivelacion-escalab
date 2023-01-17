@@ -1,38 +1,3 @@
-// /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
-//    // var carrito = [];
-//     $(document).ready(function(){    
-//         $('#boton-guardar').click(function(){        
-//             /*Captura de datos escrito en los inputs*/        
-//             var prod = document.getElementById("prod-name").value;
-//             var prodPrice = document.getElementById("prod-price").value;
-//             localStorage.setItem('Producto', prod);
-//             console.log(prod);
-//             // var newItem = {
-//             //     Producto: prod,
-//             //     Precio: prodPrice
-//             // };
-            
-//             //  console.log(newItem);
-
-//             //  carrito.push(newItem);
-//             //  localStorage.setItem('Carrito', JSON.stringify(carrito))
-//         });
-        
-//     });
-
-// /*Funcion Cargar y Mostrar datos*/
-// $(document).ready(function(){    
-//     $('#boton-cargar').click(function(){                       
-//         /*Obtener datos almacenados*/
-//         var prod = localStorage.getItem("Producto");
-//         var prodPrice = localStorage.getItem("Precio");
-//         /*Mostrar datos almacenados*/      
-//         document.getElementById("prod-encarro").innerHTML = prod;
-//         document.getElementById("price-encarro").innerHTML = prodPrice; 
-//     });   
-// });
-
-
 let count = 0;
 let sum = 0;
 let cart = {};
@@ -51,8 +16,8 @@ if (localStorage.getItem("cart")) {
 
 updateCart();
 
-
-let btns = document.querySelectorAll(".prod-footer button");
+let btns = document.querySelectorAll("div.button button");
+console.log(btns.length);
 
 for (let i = 0; i < btns.length; i++) {
     let btn = btns[i];
@@ -92,8 +57,8 @@ if (id in cart) {
 }
 
 function updateCart() {
-    // document.getElementById("sum").textContent = sum;
-    // document.getElementById("count").textContent = count;
+    document.getElementById("sum").textContent = sum;
+    document.getElementById("count").textContent = count;
     localStorage.setItem("sum", sum);
     localStorage.setItem("count", count);
 }

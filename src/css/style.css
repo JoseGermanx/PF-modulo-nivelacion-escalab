@@ -20,6 +20,10 @@ body {
     margin-right: 250px;
     
 }
+
+.car {
+    
+}
 .header-bar {
     display: flex;
     flex-direction: row;
@@ -66,6 +70,7 @@ body {
     align-items: center;
     padding-left: 15%;
 }
+
 .perifericos-2 {
     
     margin-top: 30px;
