@@ -1,5 +1,5 @@
 
-document.querySelector('#boton').addEventListener('click', traerDatos());
+document.querySelector('#prod-grid', traerDatos());
 
 function traerDatos() {
     
@@ -15,6 +15,30 @@ function traerDatos() {
             let data = JSON.parse(this.responseText);
             //console.log(data);
 
+            // data.forEach( (prod) => {
+
+            //     let content = document.createElement ('div');
+            //     content.className = "prod-card";
+            //     content.innerHTML = `
+            //     <div class="prod-img">
+            //             <img src="/src/img/img_load.jpg"/>
+            //         </div>
+            //         <div class="prod-name" >
+            //             <input type="hidden" id="prod-name" value=${prod.prod_name}/>
+            //             <p>${prod.prod_name}</p>
+            //         </div>
+            //         <div class="prod-footer">
+            //             <div class="prod-price">
+            //                 <input type="hidden" class="price" id="prod-price" value=${prod.price}>
+            //                     <p>${prod.price}</p>
+            //             </input>
+            //             </div>
+            //             <div class="button" >
+            //             <button id="boton-guardar">CARRO</button>
+            //         </div>
+            //         </div>       
+            //     `
+            // });
             let res = document.querySelector('#prod-grip');
             res.innerHTML = '';
 
@@ -25,23 +49,21 @@ function traerDatos() {
                         <img src="/src/img/img_load.jpg"/>
                     </div>
                     <div class="prod-name" >
-                        <input type="hidden" id="prod-name" value=${item.prod_name}/>
+                        <input type="hidden" id="prod-name" value=${item.prod_name}>
                         <p>${item.prod_name}</p>
+                        </input>
                     </div>
                     <div class="prod-footer">
                         <div class="prod-price">
-                            <input type="hidden" class="price" id="prod-price" value=${item.price}>
+                            <input type="hidden" class="price" id="prod-price" value=${item.price} >
                                 <p>${item.price}</p>
                         </input>
                         </div>
                         <div class="button" >
-                        <input type="button" id="boton-guardar">
-                            <p>CARRO</p>
-                        </input>
+                        <button id="boton-guardar-"${item.id} data-price=${item.price} data-id=${item.id} data-title=${item.prod_name}>+ Agregar</button>
                     </div>
                     </div>
-                </div>
-                 
+                </div>                 
                  `
             }
 
