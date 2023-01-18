@@ -61,7 +61,7 @@ body {
 .jumbotron {
     display: flex;
     flex-direction: row;
-    background-image: url(/src/img/OPSEG70.jpg);
+    background-image: url(../img/OPSEG70.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
