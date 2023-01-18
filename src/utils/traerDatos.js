@@ -1,6 +1,5 @@
 
 //document.querySelector('html', traerDatos());
-
 function traerDatos() {
     
     const xhttp = new XMLHttpRequest();
