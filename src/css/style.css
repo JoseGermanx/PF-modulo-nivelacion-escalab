@@ -56,6 +56,12 @@ body {
 
 }
 
+.header-bar .title h3 a {
+    text-decoration: none;
+    color: white;
+
+}
+
 .container-logo-title {
     display: flex;
     flex-direction: row;
@@ -191,6 +197,34 @@ body {
     color: mediumseagreen;
 }
 
+
+.trankyou {
+
+    display: flex !important;
+}
+
+#tbody {
+    width: 100%;
+}
+
+#mostrar-carro {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: var(--main-color);
+    color: #fad895;
+    margin-left: 65%;
+    margin-right: 5%;
+  
+}
+#mostrar-carro > div {
+    padding-top:12px;
+    padding-bottom: 20px;
+    padding-right:5%;
+
+
+}
+
 @media only screen and (max-width: 850px) {
     .container {
         padding-top: 20%;
@@ -218,6 +252,11 @@ body {
 
     .jumbotron {
        height: 70%;
+    }
+
+    #mostrar-carro {
+        margin-left:5% ;       
+        font-size:0.9em;
     }
 }
 @media only screen and (min-width: 851px) {
